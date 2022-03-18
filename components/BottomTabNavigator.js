@@ -10,6 +10,7 @@ import React from 'react';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from './Home';
+import HomeNavigator from '../HomeNavigator';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Footer = props => {
@@ -17,7 +18,7 @@ const Footer = props => {
 
   return (
     <Tab.Navigator
-      initialRouteName="Home"
+      initialRouteName="HomeNavigator"
       activeColor="#38A0FF"
       inactiveColor="#CCCCCC"
       screenOptions={{tabBarShowLabel: false, headerShown: false}}
@@ -26,8 +27,8 @@ const Footer = props => {
         return null;
       }}>
       <Tab.Screen
-        name="Home"
-        component={Home}
+        name="HomeNavigator"
+        component={HomeNavigator}
         options={{
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="home" color={color} size={26} />

@@ -8,13 +8,13 @@
 import React from 'react';
 import type {Node} from 'react';
 
-import Footer from './components/Footer';
+import BottomTabNavigator from './components/BottomTabNavigator';
 import {NavigationContainer} from '@react-navigation/native';
 
 const App: () => Node = () => {
   return (
     <NavigationContainer>
-      <Footer />
+      <BottomTabNavigator />
     </NavigationContainer>
   );
 };

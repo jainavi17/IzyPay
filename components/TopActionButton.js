@@ -9,8 +9,9 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import styles from '../styles/AppStyles';
 
 const TopActionButton = props => {
-  const callTopAction = (callback: string) => {
+  const callTopAction = (screen: string) => {
     console.log('Yahoo!');
+    props.nav.navigate(screen, {name: 'Jane'});
     return;
   };
 
@@ -38,7 +39,7 @@ const TopActionButton = props => {
           justifyContent: 'center',
           alignItems: 'center',
         }}
-        onPress={() => callTopAction(props.callback)}>
+        onPress={() => callTopAction(props.screen)}>
         {getTopActionIcon(props.item)}
       </TouchableOpacity>
       <Text style={styles.topActionText}>{props.item.name}</Text>

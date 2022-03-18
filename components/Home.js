@@ -26,24 +26,26 @@ const topActionsData = [
     name: 'Send',
     icon: 'send',
     type: 'FontAwesome',
+    navigateTo: 'SendScreen',
   },
   {
     name: 'Receive',
     icon: 'download-outline',
     type: 'Ionic',
+    navigateTo: 'SendScreen',
   },
   {
     name: 'Top up',
     icon: 'plus',
     type: 'Ant',
+    navigateTo: 'SendScreen',
   },
 ];
 
-const Home: () => Node = () => {
+const Home: () => Node = ({navigation}) => {
   const renderTopActions = ({item}) => (
-    <TopActionButton item={item} callback={item.name} />
+    <TopActionButton item={item} screen={item.navigateTo} nav={navigation} />
   );
-
   return (
     <View style={{height: '100%'}}>
       <ImageBackground
