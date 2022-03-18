@@ -90,6 +90,32 @@ const AppStyles = StyleSheet.create({
     lineHeight: 24,
     color: '#000000',
   },
+  roundButton: {
+    width: 75,
+    height: 75,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+    borderRadius: 100,
+    backgroundColor: '#38A0FF',
+  },
+  centerText: {
+    flex: 1,
+    fontSize: 18,
+    padding: 32,
+    color: '#777',
+  },
+  textBold: {
+    fontWeight: '500',
+    color: '#000',
+  },
+  buttonText: {
+    fontSize: 21,
+    color: 'rgb(0,122,255)',
+  },
+  buttonTouchable: {
+    padding: 16,
+  },
 });
 
 export default AppStyles;
